@@ -18,28 +18,29 @@
   <div class="wrapper ">
     <div class="main-panel">
       <!-- Navbar -->
-      <?php $this->load->view('inc/header') ?>
+        
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
           <div class="row">-
-            <div class="col-md-8 offset-2">
+            <div class="col-md-5 offset-2">
               <h1><?php echo lang('login_heading');?></h1>
 <p><?php echo lang('login_subheading');?></p>
 
 <div id="infoMessage"><?php echo $message;?></div>
 
 <?php echo form_open("auth/login");?>
+  
 
-  <p>
-    <?php echo lang('login_identity_label', 'identity');?>
-    <?php echo form_input($identity, '', 'class="form-controll  "');?>
-  </p>
+  <div class="form-group ">
+    <?php echo lang('login_identity_label', 'identity', 'class=""');?>
+    <?php echo form_input($identity, '', 'class="form-control" placeholder="Enter email or username"');?>
+  </div>
 
-  <p>
-    <?php echo lang('login_password_label', 'password');?>
-    <?php echo form_input($password);?>
-  </p>
+  <div class="form-group ">
+    <?php echo lang('login_password_label', 'password', 'class="bmd-label-floating"');?>
+    <?php echo form_input($password, '', 'class="form-control" placeholder="Enter your password"');?>
+  </div>
 
   <p>
     <?php echo lang('login_remember_label', 'remember');?>
@@ -47,7 +48,7 @@
   </p>
 
 
-  <p><?php echo form_submit('submit', lang('login_submit_btn'));?></p>
+  <p><?php echo form_submit('submit', lang('login_submit_btn'), 'class="form-control btn btn-primary"');?></p>
 
 <?php echo form_close();?>
 
@@ -56,39 +57,5 @@
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container-fluid">
-          <nav class="float-left">
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright float-right">
-            &copy;
-            <script>
-              document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-          </div>
-        </div>
-      </footer>
+      
     </div>

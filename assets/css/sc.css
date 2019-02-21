@@ -1,0 +1,8 @@
+a {
+    color: #2a9700;
+}
+.btn.btn-primary {
+    background: -webkit-linear-gradient(top,#2d9c00,#268f00);
+    color: #fff;
+    border-color: #2d9c00;
+}

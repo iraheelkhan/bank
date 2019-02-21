@@ -1,6 +1,49 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+$route['default_controller'] = 'welcome';
+$route['404_override'] = '';
+$route['translate_uri_dashes'] = FALSE;
+
+/*=============================================
+===============custom routes goes here=========
+=============================================*/
+$route['user'] = 'test/view';
+/*=========== Dashboard routes ==============*/
+$route['account'] = 'MainController/dashboard';
+
+
+/*=========== Auths routes ==============*/
+$route['logout'] = 'auth/logout';
+$route['login'] = 'auth/login';
+
+/*=========== profile routes ==============*/
+$route['profile'] = 'MainController/profile';
+
+
+
+/*=========== trasnsacations routes ==============*/
+
+
+
+/*=========== tranfers routes ==============*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 | -------------------------------------------------------------------------
 | URI ROUTING
@@ -49,10 +92,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
-
-// custom routes goes here
-$route['user'] = 'test/view';
-$route['user/add'] = 'test/view';
