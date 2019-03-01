@@ -9,6 +9,7 @@
   <title>
     SC Bank
   </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <?php $this->load->view('inc/headerscripts') ?>
@@ -92,14 +93,37 @@
             </div> -->
           </div>
           <div class="row">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-12 col-md-12">
               <div class="card">
+<<<<<<< HEAD
+                <div class="card-header card-header-success">
+                  <h4 class="card-title">Transaction Stats - 2019</h4>
+=======
                 <div class="card-header card-header-warning">
                   <h4 class="card-title">Transaction Stats</h4>
+>>>>>>> 6eabb6d25c2e598ca774cb784db26d63c72f3ef2
                   <p class="card-category"></p>
                 </div>
                 <div class="card-body table-responsive">
                   <table class="table table-hover">
+<<<<<<< HEAD
+                    <thead class="text-success">
+                      <th>No</th>
+                      <th>Amount</th>
+                      <th>Location</th>
+                      <th>Date</th>
+                    </thead>
+                    <tbody>
+                      <?php $index = 1;
+                       foreach($transactions as $trans): ?>
+                        <tr>
+                          <td><?= $index++?></td>
+                          <td>$<?= $trans->amount?></td>
+                          <td><?= $trans->location?></td>
+                          <td><?= $trans->created_at?></td>
+                        </tr>
+                      <?php endforeach;?>
+=======
                     <thead class="text-warning">
                       <th>ID</th>
                       <th>Name</th>
@@ -131,50 +155,53 @@
                         <td>$38,735</td>
                         <td>Korea, South</td>
                       </tr>
+>>>>>>> 6eabb6d25c2e598ca774cb784db26d63c72f3ef2
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-12 col-md-12">
               <div class="card">
+<<<<<<< HEAD
+                <div class="card-header card-header-success">
+                  <h4 class="card-title">Withdrawl Stats - 2019</h4>
+=======
                 <div class="card-header card-header-warning">
                   <h4 class="card-title">Withdrawl Stats</h4>
+>>>>>>> 6eabb6d25c2e598ca774cb784db26d63c72f3ef2
                   <p class="card-category"></p>
                 </div>
                 <div class="card-body table-responsive">
                   <table class="table table-hover">
+<<<<<<< HEAD
+                    <thead class="text-success">
+                      <th>No</th>
+                      <th>Amount</th>
+                      <th>To Account No</th>
+                      <th>Email</th>
+                      <th>Type</th>
+                      <th>Created</th>
+=======
                     <thead class="text-warning">
                       <th>ID</th>
                       <th>Name</th>
                       <th>Amount</th>
                       <th>Type</th>
+>>>>>>> 6eabb6d25c2e598ca774cb784db26d63c72f3ef2
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Dakota Rice</td>
-                        <td>$36,738</td>
-                        <td>Niger</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Minerva Hooper</td>
-                        <td>$23,789</td>
-                        <td>Curaçao</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Sage Rodriguez</td>
-                        <td>$56,142</td>
-                        <td>Netherlands</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Philip Chaney</td>
-                        <td>$38,735</td>
-                        <td>Korea, South</td>
-                      </tr>
+                      <?php $index = 1;
+                       foreach($transfers as $transfer): ?>
+                        <tr>
+                          <td><?= $index++?></td>
+                          <td>$<?= $transfer->amount?></td>
+                          <td><?= $transfer->to_account_no?></td>
+                          <td><?= $transfer->email?></td>
+                          <td><?= $transfer->type?></td>
+                          <td><?= $transfer->created_at?></td>
+                        </tr>
+                      <?php endforeach;?>
                     </tbody>
                   </table>
                 </div>

@@ -28,11 +28,20 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                  <a class="dropdown-item" href="#">Another Notification</a>
-                  <a class="dropdown-item" href="#">Another One</a>
+                  <a class="dropdown-item" href="#">
+                    <span class="fa fa-warning" style="font-weight: 600; color: red;"></span> 
+                  &nbsp; 
+                    New sign in to your account
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <span style="font-weight: 600; color: green;">$50</span> 
+                  &nbsp; 
+                    recieved from Micheal Grith
+                  </a>
+                  <a class="dropdown-item" href="#">
+                  <span style="font-weight: 600; color: green;">$8,010</span> 
+                  &nbsp;
+                   transfer completed</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -44,7 +53,10 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                   <a class="dropdown-item" href="profile">Profile</a>
+<<<<<<< HEAD
+=======
                   <a class="dropdown-item" href="#">Settings</a>
+>>>>>>> 6eabb6d25c2e598ca774cb784db26d63c72f3ef2
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="logout">Log out</a>
                 </div>
