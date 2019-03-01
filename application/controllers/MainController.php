@@ -26,7 +26,12 @@ class MainController extends CI_Controller
 		$data['user'] = $this->ion_auth->user()->row();
 		$user_id = $data['user']->id;
 		$data['account'] = $this->accounts->fetch_account($user_id);
+<<<<<<< HEAD
+		$data['transactions'] = $this->transactions->fetch_transactions($user_id);
+		$data['transfers'] = $this->transfers->fetch_transfers($user_id);
+=======
 		$data['transaction'] = $this->transactions->fetch_transactions($user_id);
+>>>>>>> 6eabb6d25c2e598ca774cb784db26d63c72f3ef2
 		return $this->load->view('dashboard/dashboard', $data);
 	}
 
