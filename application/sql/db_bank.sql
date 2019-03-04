@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2019 at 04:01 PM
+-- Generation Time: Feb 20, 2019 at 04:41 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -112,19 +112,7 @@ CREATE TABLE `transactions` (
 --
 
 INSERT INTO `transactions` (`id`, `user_id`, `type`, `amount`, `location`, `created_at`) VALUES
-(1, 2, 'ATM', 200, 'Jinnah Avenue, UBL Tower, ISB', '2019-02-20 15:35:50'),
-(2, 2, 'ATM', 180.85, 'F7 Markaz, MCB', '2019-02-22 14:23:44'),
-(3, 2, 'ATM', 200.5, 'Blue Area, Bank Alfalah, 24 West Jinnah Avenue', '2019-01-02 04:26:38'),
-(4, 2, 'ATM', 51.1, 'Murree Road, Bank Alfalah, 6th Road', '2019-01-19 08:04:40'),
-(5, 2, 'ATM', 180.85, 'F7 Markaz, MCB', '2019-01-16 18:12:42'),
-(6, 2, 'ATM', 150.6, 'Khanapol, UBL PVT PTD, Express Highly', '2019-02-02 16:54:50'),
-(7, 2, 'ATM', 100.3, 'F8 Markaz, UBL PVT PTD', '2019-02-01 09:22:38'),
-(8, 2, 'ATM', 80.23, 'I10-3, MCB, Usman Plaza', '2019-02-03 01:38:16'),
-(9, 2, 'ATM', 170.51, 'F8 Markaz, UBL PVT PTD', '2019-02-10 09:26:30'),
-(10, 2, 'ATM', 120.6, 'Murree Road, Bank Alfalah, 6th Road', '2019-02-16 13:13:37'),
-(11, 2, 'ATM', 150.65, 'Murree Road, Bank Alfalah, 6th Road', '2019-02-13 08:08:39'),
-(12, 2, 'ATM', 110.84, 'F8 Markaz, UBL PVT PTD', '2019-02-14 09:18:34'),
-(13, 2, 'ATM', 201.13, 'Murree Road, Bank Alfalah, 6th Road', '2019-02-07 08:28:19');
+(1, 2, 'ATM', 200, 'Jinnah Avenue, UBL Tower, ISB', '2019-02-20 15:35:50');
 
 -- --------------------------------------------------------
 
@@ -136,24 +124,10 @@ CREATE TABLE `transfers` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `amount` float NOT NULL,
-  `to_account_no` text NOT NULL,
-  `email` text NOT NULL,
+  `to_account_no` int(11) NOT NULL,
   `type` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `transfers`
---
-
-INSERT INTO `transfers` (`id`, `user_id`, `amount`, `to_account_no`, `email`, `type`, `created_at`) VALUES
-(1, 2, 500.3, '50005451358', 'shabananoureen11@gmail.com', 'online', '2019-02-08 14:54:20'),
-(2, 2, 401.6, '84957682153', 'ibadkhan07@gmail.com', 'online', '2019-02-12 14:52:58'),
-(3, 2, 200.5, '36519000502', 'fizakabeer@outlook.com', 'online', '2019-02-03 14:52:53'),
-(4, 2, 900.9, '33449000500', 'kabeerhussain97@gmail.com', 'online', '2019-02-13 14:53:12'),
-(5, 2, 755.32, '84957682153', 'shabananoureen11@gmail.com', 'online', '2019-01-22 07:21:21'),
-(6, 2, 1559.95, '84957682153', 'shabananoureen11@gmail.com', 'online', '2019-01-01 14:52:49'),
-(7, 2, 1212.5, '22948555333', 'ayzekhn@gmail.com', 'online', '2019-01-10 14:53:59');
 
 -- --------------------------------------------------------
 
@@ -187,7 +161,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
 (1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1550674434, 1, 'Admin', 'istrator', 'ADMIN', '0'),
-(2, '::1', 'iraheelkhan', '$2y$08$RJ.pFTXx.7RFfACAx0h0J.u/tluPF2VAiNFjdws85e2N5usYRM5dq', NULL, 'irahilkhan@gmail.com', NULL, NULL, NULL, NULL, 1550674490, 1550843355, 1, 'Muhammad Raheel', 'Khan', 'Zamunga', '923333639395');
+(2, '::1', 'iraheelkhan', '$2y$08$RJ.pFTXx.7RFfACAx0h0J.u/tluPF2VAiNFjdws85e2N5usYRM5dq', NULL, 'irahilkhan@gmail.com', NULL, NULL, NULL, NULL, 1550674490, 1550674635, 1, 'Muhammad Raheel', 'Khan', 'Zamunga', '923333639395');
 
 -- --------------------------------------------------------
 
@@ -273,7 +247,7 @@ ALTER TABLE `users_groups`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `balance`
@@ -291,19 +265,19 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `login_attempts`
 --
 ALTER TABLE `login_attempts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `transfers`
 --
 ALTER TABLE `transfers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
